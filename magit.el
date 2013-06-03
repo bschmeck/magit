@@ -4215,6 +4215,12 @@ if FULLY-QUALIFIED-NAME is non-nil."
 
 (defvar magit-status-line-align-to 9)
 
+(defcustom magit-status-show-tags t
+  "Control whether or not tag information is displayed"
+  :type 'boolean
+  :group 'magit
+  :set 'magit-set-variable-and-refresh)
+
 (defun magit-insert-status-line (heading info-string)
   (insert heading ":"
           (make-string (max 1 (- magit-status-line-align-to
@@ -4250,7 +4256,7 @@ if FULLY-QUALIFIED-NAME is non-nil."
                  " " (abbreviate-file-name default-directory)))
         (magit-insert-status-line
          "Head" (if no-commit "nothing committed (yet)" head))
-        (when (or current-tag next-tag)
+        (when (and magit-status-show-tags (or current-tag next-tag))
           (magit-insert-status-line
            (if both-tags "Tags" "Tag")
            (concat
