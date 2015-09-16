@@ -1,47 +1,43 @@
-How to contribute
-=================
+Getting help
+============
 
-Contributions to Magit are highly welcome.  Here are a few guidelines
-that will help your patches hit upstream as soon as possible.
+**When something doesn't work as expected then please first see the
+[FAQ][faq].** Then also try the list of [open issues][issues] and use
+the search box at the top of that page to find older related issues.
+You should also consult the [manual][manual] and ask a general-purpose
+search engine.
 
-Branching scheme
-----------------
+If everything else fails then ask for help on the
+**[Emacs Stackexchange site][forum]**, the
+[mailing list][list], or the
+[Gitter chat][chat].
 
-Magit uses three main branches for its lifecyle: `maint`, `master` and
-`next`.
+Reporting issues and suggesting features
+========================================
 
-* `maint` contains the set of patches that will definitely make it
-  into the next minor release.
-* `master` contains the set of patches that will highly likely make it
-  into the next major release.
-* `next` contains patches that necessitate some additional
-  checks/improvements before they're integrated into a release.
+To report bugs and suggest new feature use the [issue tracker][issues].
 
-Making changes
---------------
+Never use the phrase "at the very least".
 
-A good practice is to create a topic branch off Magit, from the branch
-you target for *final* inclusion.  This should *always* be either
-`maint` or `master`.
+Code contributions
+==================
 
-If you branch off `next`, you'll only put more overhead on the
-maintainer's shoulders, and the integration will suffer from
-additional delays.
+If you have some code which you would like to be merged, then open a
+[pull requests][pulls].  Please create atomic commits with descriptive
+commit messages.
 
-Please make sure your commits are well-organized and "atomic" (hitting
-a single well-defined target each).
+Donations
+=========
 
-Please also make sure you check that byte-compilation completes
-without errors or warnings, and that tests run without failures.
+Please also consider to contribute by making a
+[monetary donation][donations].
 
-Bonus points if you add tests to cover the feature you're hacking.
 
-Submitting changes
-------------------
-
-The preferred way of submitting your changes is to open a pull request
-on the central Magit Github repository
-(https://github.com/magit/magit).
-
-Alternately, you can send your patches to the Magit mailing list
-(magit@googlegroups.com), using `git send-email`.
+[chat]:      https://gitter.im/magit/magit
+[donations]: http://magit.vc/donations.html
+[faq]:       http://magit.vc/manual/magit/FAQ.html
+[forum]:     http://emacs.stackexchange.com/questions/tagged/magit
+[issues]:    https://github.com/magit/magit/issues
+[list]:      https://groups.google.com/forum/?fromgroups#!forum/magit
+[manual]:    http://magit.vc/manual
+[pulls]:     https://github.com/magit/magit/pulls
